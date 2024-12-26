@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Código</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verificar Código</h1>
+        <form id="form-verificar">
+            <label for="correo">Ingresa tu correo:</label>
+            <input type="email" id="correo" required placeholder="ejemplo@gmail.com">
+
+            <label for="codigo">Ingresa tu código:</label>
+            <input type="text" id="codigo" required placeholder="123456">
+            <button type="submit">Verificar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('form-verificar').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const correo = document.getElementById('correo').value;
+            const codigo = document.getElementById('codigo').value;
+
+            try {
+                const respuesta = await fetch('/verificar-codigo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ correo, codigo })
+                });
+
+                if (!respuesta.ok) {
+                    const mensaje = await respuesta.text();
+                    alert(mensaje);
+                    return;
+                }
+
+                alert('¡Código verificado! Puedes girar la ruleta.');
+                window.location.href = '/ruleta.html'; // Redirige a la página de la ruleta
+            } catch (error) {
+                alert('Hubo un error al verificar el código. Intenta nuevamente.');
+            }
+        });
+    </script>
+</body>
+</html>

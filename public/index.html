@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta Navideña</title>
+    <!-- Archivo CSS principal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente decorativa navideña -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>✨🎄¿Estás listo para un dulce giro de suerte?🎄✨</h2>
+        <form id="formulario">
+            <label for="correo">Ingresa tu correo:</label>
+            <input type="email" id="correo" required placeholder="elfo_feliz@navidad.com">
+            <button type="submit">Participar</button>
+        </form>
+
+        <!-- Descripción debajo del formulario -->
+        <p id="descripcion">
+            Cuando obtengas tu premio, sigue estos pasos:
+            <br>
+            <strong>1. Anota tu código único 📩</strong><br>
+            ¡Es tu llave mágica para obtener tu premio!<br><br>
+            <strong>2. Visítanos en nuestra tienda 🏪</strong><br>
+            ¡Estamos listos para darte la mejor sorpresa!<br><br>
+            <strong>3. Canjea tu premio con alegría 🎁</strong><br>
+            ¡Muestra tu código y recibe tu premio al instante!
+        </p>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-overlay"></div>
+    <div id="modal">
+        <img id="modal-imagen" src="./images/grinch.png" alt="Grinch">
+        <p id="modal-texto">¡Alto ahí, Grinch!</p>
+        <button id="cerrar-modal">Cerrar</button>
+    </div>
+
+    <!-- Archivo JavaScript principal -->
+    <script src="script.js"></script>
+</body>
+</html>

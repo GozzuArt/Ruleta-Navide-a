@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta Navideña</title>
+    <link rel="stylesheet" href="ruleta.css">
+</head>
+<body>
+    <h2>¡Feliz Navidad, travieso! 🎄 </h2>
+    <p>¿Te portaste bien este año? 🎅</p>
+    <p>¡Averigüémoslo en la Ruleta Navideña!</p>
+    
+    <!-- Contenedor de la ruleta -->
+    <div class="ruleta-container">
+        <canvas id="ruleta" width="400" height="400"></canvas>
+        <button id="hohoho-btn">¡HOHOHO!</button>
+    </div>
+
+    <!-- Modal para mostrar el premio -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-descripcion"></p>
+            <button id="cerrar-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="ruleta.js"></script>
+</body>
+</html>

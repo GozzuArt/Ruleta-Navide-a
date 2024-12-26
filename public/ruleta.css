@@ -1,0 +1,186 @@
+/* Importar fuentes elegantes y claras */
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url('images/fondo2.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir la pantalla */
+    color: #fff; /* Ajusta el color del texto */
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 2.5rem; /* Tamaño relativo */
+    color: #ffd700; /* Dorado navideño */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+}
+
+p {
+    font-size: 1.25rem; /* Tamaño relativo */
+    color: #f7f7f7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.ruleta-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 90%; /* Ajuste para pantallas pequeñas */
+}
+
+#ruleta {
+    border: 10px solid #ffd700; /* Dorado */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Sombra dorada */
+    max-width: 100%; /* Escalado dinámico */
+    height: auto; /* Preserva proporciones */
+}
+
+#hohoho-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.25rem; /* Tamaño relativo */
+    cursor: pointer;
+    background-color: #d9534f; /* Rojo navideño */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
+}
+
+#hohoho-btn:hover {
+    background-color: #d43f3a; /* Rojo oscuro */
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ff5842; /* Color claro navideño */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    max-width: 400px; /* Ancho máximo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+    font-family: 'Merriweather', serif;
+}
+
+#modal-titulo {
+    font-size: 1.5rem; /* Tamaño relativo */
+    color: #f5f4ec; /* Dorado suave */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil para destacar */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#modal-descripcion {
+    font-size: 1.125rem; /* Tamaño relativo */
+    color: #e6e5e5; /* Gris oscuro, neutral */
+    line-height: 1.5; /* Mejora la legibilidad */
+    margin-bottom: 25px;
+}
+
+#cerrar-modal {
+    padding: 10px 20px;
+    font-size: 1rem; /* Tamaño relativo */
+    cursor: pointer;
+    background-color: #66b33a; /* Azul elegante */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#cerrar-modal:hover {
+    background-color: #4c832c; /* Azul oscuro al pasar el ratón */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .ruleta-container {
+        padding: 20px;
+    }
+
+    #hohoho-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    #modal-titulo {
+        font-size: 1.25rem;
+    }
+
+    #modal-descripcion {
+        font-size: 1rem;
+    }
+
+    #cerrar-modal {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .ruleta-container {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    #hohoho-btn {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    #ruleta {
+        border-width: 8px;
+    }
+
+    #cerrar-modal {
+        font-size: 0.875rem;
+        padding: 6px 12px;
+    }
+}
